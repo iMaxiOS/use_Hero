@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ECq-VI-CEf">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First View Controller-->
+        <scene sceneID="8L8-Ut-loj">
+            <objects>
+                <viewController id="ECq-VI-CEf" customClass="FirstViewController" customModule="HeroVerticalCityGuideExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5QP-HP-wXs"/>
+                        <viewControllerLayoutGuide type="bottom" id="VsE-9U-1kZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2iF-3R-o4U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G0o-Bc-k1z">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="hkE-0g-6PV">
+                                    <size key="itemSize" width="375" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="item" id="WyS-Eo-E2f" customClass="CityCell" customModule="HeroVerticalCityGuideExample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MpJ-tq-Qcv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MrX-Dh-Z2q">
+                                                    <rect key="frame" x="24" y="124" width="91" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rif-gp-jrU">
+                                                    <rect key="frame" x="24" y="157" width="65" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.97638529539999996" green="0.97652524709999999" blue="0.97635465860000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="rif-gp-jrU" firstAttribute="leading" secondItem="WyS-Eo-E2f" secondAttribute="leadingMargin" constant="16" id="4wY-QY-3Pd"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MrX-Dh-Z2q" secondAttribute="trailing" symbolic="YES" id="H8J-Ip-OXr"/>
+                                            <constraint firstAttribute="trailing" secondItem="MpJ-tq-Qcv" secondAttribute="trailing" id="KbN-ds-9Nu"/>
+                                            <constraint firstAttribute="bottom" secondItem="MpJ-tq-Qcv" secondAttribute="bottom" id="SWn-v0-2gm"/>
+                                            <constraint firstItem="MpJ-tq-Qcv" firstAttribute="leading" secondItem="WyS-Eo-E2f" secondAttribute="leading" id="StL-LK-e2J"/>
+                                            <constraint firstItem="MpJ-tq-Qcv" firstAttribute="top" secondItem="WyS-Eo-E2f" secondAttribute="top" id="TAU-XA-po6"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rif-gp-jrU" secondAttribute="trailing" symbolic="YES" id="TNR-qF-g9V"/>
+                                            <constraint firstItem="rif-gp-jrU" firstAttribute="top" secondItem="MrX-Dh-Z2q" secondAttribute="bottom" constant="9" id="eVX-iS-oXH"/>
+                                            <constraint firstItem="MrX-Dh-Z2q" firstAttribute="leading" secondItem="WyS-Eo-E2f" secondAttribute="leadingMargin" constant="16" id="osL-9l-0JK"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="rif-gp-jrU" secondAttribute="bottom" constant="20" id="rkc-Or-L28"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="rif-gp-jrU" id="5d6-ml-uZs"/>
+                                            <outlet property="imageView" destination="MpJ-tq-Qcv" id="kmb-wA-2QI"/>
+                                            <outlet property="nameLabel" destination="MrX-Dh-Z2q" id="i2v-gQ-hsS"/>
+                                            <segue destination="FR5-oj-Bax" kind="presentation" id="COl-vQ-DBa">
+                                                <segue key="commit" inheritsFrom="parent" id="dtx-yl-Loy"/>
+                                                <segue key="preview" inheritsFrom="commit" id="u4B-i3-Ucl"/>
+                                            </segue>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="ECq-VI-CEf" id="TL5-sd-hYZ"/>
+                                    <outlet property="delegate" destination="ECq-VI-CEf" id="Vpp-4F-85V"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="G0o-Bc-k1z" firstAttribute="leading" secondItem="2iF-3R-o4U" secondAttribute="leading" id="8M6-zw-0LL"/>
+                            <constraint firstAttribute="trailing" secondItem="G0o-Bc-k1z" secondAttribute="trailing" id="fwa-yq-ODh"/>
+                            <constraint firstItem="G0o-Bc-k1z" firstAttribute="top" secondItem="2iF-3R-o4U" secondAttribute="top" id="inm-yc-sNr"/>
+                            <constraint firstItem="VsE-9U-1kZ" firstAttribute="top" secondItem="G0o-Bc-k1z" secondAttribute="bottom" id="yFE-ar-MLr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kz4-DG-SFM"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="cityBackground"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="collectionView" destination="G0o-Bc-k1z" id="3ae-em-FrZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XJD-Z6-lOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-0.80000000000000004" y="-0.44977511244377816"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="vcS-lB-uc7">
+            <objects>
+                <viewController storyboardIdentifier="second" id="FR5-oj-Bax" customClass="SecondViewController" customModule="HeroVerticalCityGuideExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hif-V1-D46"/>
+                        <viewControllerLayoutGuide type="bottom" id="qIc-sg-U66"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="75l-1F-she">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MEW-Ri-Xs3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkV-1O-CGY">
+                                <rect key="frame" x="24" y="395.66666666666669" width="327" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.97638529539999996" green="0.97652524709999999" blue="0.97635465860000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIp-rb-fv0">
+                                <rect key="frame" x="4" y="52" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="I1F-nG-zIp"/>
+                                    <constraint firstAttribute="width" constant="48" id="S6i-K1-pmK"/>
+                                </constraints>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="ic_keyboard_arrow_down"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="fade translate(0, -150)  zPosition(20) useGlobalCoordinateSpace"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="back"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="hero_dismissViewController" destination="fIu-9m-dBp" eventType="touchUpInside" id="BbN-WN-x2P"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tb-R3-pXD">
+                                <rect key="frame" x="24" y="350.66666666666669" width="139.66666666666666" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MEW-Ri-Xs3" secondAttribute="trailing" id="3vh-OZ-dvl"/>
+                            <constraint firstItem="MEW-Ri-Xs3" firstAttribute="top" secondItem="75l-1F-she" secondAttribute="top" id="HKq-ok-YdX"/>
+                            <constraint firstItem="lkV-1O-CGY" firstAttribute="top" secondItem="3Tb-R3-pXD" secondAttribute="bottom" constant="8" id="MSu-WH-tBY"/>
+                            <constraint firstItem="3Tb-R3-pXD" firstAttribute="centerY" secondItem="75l-1F-she" secondAttribute="centerY" constant="-37" id="QGP-so-FMz"/>
+                            <constraint firstItem="lkV-1O-CGY" firstAttribute="leading" secondItem="75l-1F-she" secondAttribute="leadingMargin" constant="8" id="Thz-UT-4kD"/>
+                            <constraint firstItem="MEW-Ri-Xs3" firstAttribute="leading" secondItem="75l-1F-she" secondAttribute="leading" id="cqg-Nk-mBG"/>
+                            <constraint firstItem="3Tb-R3-pXD" firstAttribute="leading" secondItem="75l-1F-she" secondAttribute="leadingMargin" constant="8" id="e6P-bk-YiL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lkV-1O-CGY" secondAttribute="trailing" constant="8" id="fL0-im-Tmq"/>
+                            <constraint firstItem="cIp-rb-fv0" firstAttribute="top" secondItem="hif-V1-D46" secondAttribute="bottom" constant="8" id="mQd-Tg-iqS"/>
+                            <constraint firstItem="cIp-rb-fv0" firstAttribute="leading" secondItem="75l-1F-she" secondAttribute="leadingMargin" constant="-12" id="vlL-gT-6IO"/>
+                            <constraint firstAttribute="bottom" secondItem="MEW-Ri-Xs3" secondAttribute="bottom" id="zWj-kJ-tBk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eUC-CY-deY"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="lkV-1O-CGY" id="iqh-Ub-EP2"/>
+                        <outlet property="imageView" destination="MEW-Ri-Xs3" id="EYg-dW-WIG"/>
+                        <outlet property="nameLabel" destination="3Tb-R3-pXD" id="gwR-6e-Fym"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fIu-9m-dBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799.20000000000005" y="-0.44977511244377816"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_keyboard_arrow_down" width="72" height="72"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="COl-vQ-DBa"/>
+    </inferredMetricsTieBreakers>
+</document>
